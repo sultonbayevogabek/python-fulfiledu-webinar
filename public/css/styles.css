@@ -41,9 +41,9 @@ button:focus {
 body {
     font-family: "Poppins", "Arial", sans-serif;
     color: #FFFFFF;
-    background-image: url("../img/bg@1x.jpg");
+    background-image: url("../img/webinar-bg.jpg");
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center center;
     background-size: cover;
     background-attachment: fixed;
 }
@@ -56,7 +56,7 @@ only screen and (        min-device-pixel-ratio: 2),
 only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) {
     body {
-        background-image: url("../img/bg@2x.jpg");
+        background-image: url("../img/webinar-bg@2x.jpg");
     }
 }
 
@@ -79,14 +79,24 @@ only screen and (                min-resolution: 2dppx) {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    margin-bottom: 3.5rem;
 }
 
 .webinar-date {
     width: max-content;
-    padding: 0.625rem 1.25rem;
-    background-color: #3D3A54;
+    padding: 1.2rem 1.25rem;
+    background-image:url("../img/webinar-date-bg.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: block;
+    position: fixed;
+    top: 0;
+    z-index: 2;
     border-radius: 0 0 1.125rem 1.125rem;
     margin-right: 1.875rem;
+    margin-bottom: 0.2rem;
+
 }
 
 .webinar-date-value {
@@ -94,34 +104,42 @@ only screen and (                min-resolution: 2dppx) {
     align-items: center;
     font-size: 1.25rem;
     padding-top: 0.3rem;
+
 }
 
 .webinar-date-title {
     font-weight: 300;
     font-size: 0.875rem;
     text-align: center;
-    color: rgba(256, 256, 256, 0.6);
+    color: #000000;
 }
+
 
 .webinar-date-date {
     font-size: 1.5rem;
     font-weight: 500;
     letter-spacing: 0;
-    color: #D697FD;
+    color: #000000;
     margin-right: 0.75rem;
     padding-right: 0.75rem;
     border-right: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.purple {
-    color: #D697FD;
+.gold {
+    font-size: 4rem;
+    color: #F5CB72;
+}
+
+.gold-telegram {
+    font-size: 3.125rem;
+    color: #F5CB72;
 }
 
 .webinar-date-time {
     font-size: 1.5rem;
     font-weight: 500;
     letter-spacing: 0;
-    color: white;
+    color: #000000;
 }
 
 .webinar-mentor h2 {
@@ -146,24 +164,21 @@ only screen and (                min-resolution: 2dppx) {
 }
 
 .webinar-title {
-    padding-left: 1rem;
-    padding-bottom: 0.5rem;
-    border-left: 0.635rem solid #D697FD;
-    background-image: url("../img/flag.png");
-    background-repeat: no-repeat;
-    background-size: 7rem;
-    background-position: 42% -2rem;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .webinar-title h1 {
-    font-size: 2.5rem;
     margin-bottom: 1rem;
     line-height: 1;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-size: 4rem;
 }
 
 .webinar-title p {
     line-height: 1;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     font-weight: 500;
     letter-spacing: 0;
 
@@ -181,16 +196,19 @@ only screen and (                min-resolution: 2dppx) {
 }
 
 .webinar-main-content {
-    width: 55%;
+    width: 70%;
 }
 
 .webinar-main-heading-telegram {
-    font-size: 2.5rem;
+    color: #FFF;
+    font-size: 3.125rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 117%; /* 3.65625rem */
 }
 
 .webinar-main-info {
-    width: 32rem;
-    padding-top: 3rem;
+    max-width: 50rem;
 }
 
 .webinar-main-info--telegram {
@@ -211,6 +229,8 @@ only screen and (                min-resolution: 2dppx) {
 }
 
 .webinar-main-ul {
+    max-width: 100%;
+    width: 100%;
     margin: 0 0 4rem;
     padding: 0;
     list-style-type: none;
@@ -218,8 +238,15 @@ only screen and (                min-resolution: 2dppx) {
 
 .webinar-main-li {
     display: flex;
+    max-width: max-content;
+    width: 100%;
     align-items: center;
     margin-bottom: 1.125rem;
+    height: 3.9375rem;
+    padding: 1.25rem 1.875rem 1.25rem 1.25rem;
+    border-radius: 3.125rem;
+    border: 2px solid #2C443E;
+    background-color: #0D1E16;
 }
 
 .webinar-main-disc {
@@ -237,38 +264,61 @@ only screen and (                min-resolution: 2dppx) {
 }
 
 .webinar-main-text {
-    font-size: 1.125rem;
-    color: rgba(256, 256, 256, 0.6);
+    width: 100%;
+    max-width: 100%;
+    color: #FFF;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    white-space: nowrap;
 }
 
 .webinar-main-hint strong {
     color: #FF5D5D;
 }
 
+.info__opportunity {
+    display: flex;
+    align-items: center;
+}
+
+
+.info__discount {
+    display: flex;
+    flex-direction: column;
+}
+
+.info__discount del {
+    color: #FFF;
+    font-size: 1.375rem;
+    font-weight: 400;
+}
+
+.info__discount strong {
+    display: flex;
+    color: #F5CB72;
+    font-size: 3.125rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+
 .webinar-main-button {
+    width: 100%;
+    max-width: 21rem;
     position: relative;
-    height: 4.5rem;
+    height: 5.5rem;
     border-radius: 1.5rem;
-    background: linear-gradient(180deg, #EB09EF 0%, #DD1A8F 100%);
+    margin-right: 2.7rem;
+    background-color: #F5CB72;
     font-size: 1.5rem;
-    color: #FFFFFF;
+    color: #443412;
     font-weight: 500;
     transition: all 0.1s ease;
 }
 
-.webinar-main-button::after {
-    content: "";
-    position: absolute;
-    top: -1rem;
-    right: -6rem;
-    display: block;
-    width: 6rem;
-    height: 6rem;
-    background-image: url("../img/arrow.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
+
 
 .webinar-telegram-button {
     display: flex;
@@ -277,9 +327,9 @@ only screen and (                min-resolution: 2dppx) {
     margin-top: 2rem;
     height: 4.5rem;
     border-radius: 1.5rem;
-    background: linear-gradient(180deg, #EB09EF 0%, #DD1A8F 100%);
+    background: #F5CB72;
     font-size: 1.5rem;
-    color: #FFFFFF;
+    color: #443412;
     font-weight: 500;
     transition: all 0.1s ease;
     cursor: pointer;
@@ -311,6 +361,8 @@ only screen and (                min-resolution: 2dppx) {
 .webinar-telegram-button img {
     width: 2rem;
     margin-right: 0.75rem;
+    color:#F5CB72 ;
+    background-color: #F5CB72;
 }
 
 .webinar-main-mentor {
@@ -339,6 +391,7 @@ only screen and (                min-resolution: 2dppx) {
 
 .modal-backdrop--open {
     display: grid;
+    animation: fade-slide-in 0.3s ease-out forwards;
 }
 
 .modal-content {
@@ -349,7 +402,18 @@ only screen and (                min-resolution: 2dppx) {
     background-color: #fff;
     border-radius: 1.125rem;
     color: rgba(0, 0, 0, 0.60);
+    background-attachment: fixed;
 }
+
+@keyframes fade-slide-in {
+    from {
+        transform: translateY(-5rem);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
 
 .form-heading {
     margin-bottom: 0.75rem;
@@ -385,9 +449,9 @@ only screen and (                min-resolution: 2dppx) {
 .form-button {
     height: 3rem;
     border-radius: 0.75rem;
-    background: linear-gradient(180deg, #EB09EF 0%, #DD1A8F 100%);
+    background: #F5CB72;
     font-size: 1.125rem;
-    color: #FFFFFF;
+    color: #443412;
     font-weight: 500;
     transition: all 0.1s ease;
 }
@@ -407,7 +471,7 @@ only screen and (                min-resolution: 2dppx) {
 
 @media (min-width: 576px) {
     .container, .container-sm {
-        max-width: 540px;
+        max-width: 740px;
     }
 }
 
@@ -475,6 +539,11 @@ only screen and (                min-resolution: 2dppx) {
         padding-bottom: 0;
     }
 
+    .webinar-main-li {
+        max-width: 100%;
+        width: 100%;
+    }
+
     .webinar-main--telegram {
         text-align: center;
     }
@@ -496,14 +565,176 @@ only screen and (                min-resolution: 2dppx) {
     }
 }
 
+@media (max-width: 720px) {
+    .webinar-title {
+        margin-bottom: 2rem;
+    }
+
+    .webinar-main-li {
+        padding: 2rem 1.875rem 2rem 1.25rem;
+    }
+
+    .webinar-main-text {
+        white-space: normal;
+    }
+}
+
+
+
+@media (max-width: 650px) {
+    .webinar-main-li {
+        padding: 2rem 1.875rem 2rem 1.25rem;
+    }
+    .gold, .webinar-title h1 {
+        font-size: 3rem;
+    }
+
+    .webinar-main-text {
+        white-space: normal;
+    }
+    .webinar-main-button {
+        width: 100%;
+        max-width: 18rem;
+        position: relative;
+        height: 5.5rem;
+        border-radius: 1.5rem;
+        margin-right: 3.7rem;
+    }
+
+    .info__discount del {
+        color: #FFF;
+        font-size: 1.375rem;
+        font-weight: 400;
+    }
+
+    .info__discount strong {
+        display: flex;
+        color: #F5CB72;
+        font-size: 2.125rem;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    .webinar-title p {
+        line-height: 1;
+        font-size: 1.75rem;
+        font-weight: 500;
+        letter-spacing: 0;
+
+    }
+
+}
+
+@media (max-width: 600px) {
+    html {
+        font-size: 12px;
+    }
+    .gold, .webinar-title h1 {
+        font-size: 2.5rem;
+    }
+
+}
+
 @media (max-width: 576px) {
     .webinar-main-mentor img {
         width: 100%;
     }
 
-    .webinar-title {
-        background-position: 85% -2rem;
+    .webinar-main-button {
+        width: 100%;
+        max-width: 15rem;
+        position: relative;
+        height: 5.5rem;
+        border-radius: 1.5rem;
+        margin-right: 3.7rem;
     }
+    
+}
+
+
+@media (max-width: 500px) {
+    .webinar-main-heading-telegram, .gold-telegram {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 410px) {
+    .webinar-main-text {
+        width: 100%;
+        max-width: 100%;
+        color: #FFF;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+    .info__discount del {
+        color: #FFF;
+        font-size: 1.1rem;
+        font-weight: 400;
+    }
+
+    .info__discount strong {
+        display: flex;
+        color: #F5CB72;
+        font-size: 2.125rem;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+}
+
+@media (max-width: 360px) {
+    .gold, .webinar-title h1 {
+        font-size: 2.2rem;
+    }
+
+    .webinar-title p {
+        line-height: 1;
+        font-size: 1.4rem;
+        font-weight: 500;
+        letter-spacing: 0;
+
+    }
+
+
+    .webinar-main-text {
+        width: 100%;
+        max-width: 100%;
+        color: #FFF;
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+    .info__discount del {
+        color: #FFF;
+        font-size: 1.1rem;
+        font-weight: 400;
+    }
+
+    .info__discount strong {
+        display: flex;
+        color: #F5CB72;
+        font-size: 2.125rem;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+}
+
+
+@media (max-width: 1400px) {
+    .header-wrapper {
+        margin-bottom: 1rem;
+    }
+
+    .webinar-date {
+        position: static;
+    }
+
+   .webinar-main-ul {
+       margin-bottom: 2rem;
+   }
+    
 }
 
 @media (min-width: 1500px) {
