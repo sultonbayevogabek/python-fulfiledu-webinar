@@ -595,7 +595,7 @@ only screen and (                min-resolution: 2dppx) {
     }
 
     .info__opportunity .webinar-main-button {
-        display: none;
+        display: block;
     }
 
     .info__discount {
