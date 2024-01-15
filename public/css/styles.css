@@ -296,6 +296,9 @@ only screen and (                min-resolution: 2dppx) {
     display: flex;
     align-items: center;
 }
+.discount-smaller-width {
+    display: none;
+}
 
 
 .info__discount {
@@ -485,6 +488,11 @@ only screen and (                min-resolution: 2dppx) {
     cursor: pointer;
 }
 
+
+
+
+
+
 @media (min-width: 576px) {
     .container, .container-sm {
         max-width: 740px;
@@ -530,6 +538,41 @@ only screen and (                min-resolution: 2dppx) {
         background-color: #000000;
         /*background-image: url("../img/bg-mobile.jpg");*/
         background-size: cover;
+    }
+
+
+    .discount-smaller-width {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+
+    .discount-smaller-width del {
+        margin-right: 1rem;
+        font-size: 1.3rem;
+    }
+
+    .discount-large-width {
+        display: none;
+    }
+
+    .info__opportunity {
+       flex-direction: column;
+    }
+
+    .webinar-main-button {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .info__discount {
+        flex-direction: row;
+        align-items: center;
+        order: -1;
     }
 
     .telegram-body {
@@ -614,7 +657,6 @@ only screen and (                min-resolution: 2dppx) {
     .info__opportunity {
         display: flex;
         align-items: center;
-        justify-content: center;
     }
 
 }
@@ -734,7 +776,6 @@ only screen and (                min-resolution: 2dppx) {
     }
     .info__discount del {
         color: #FFF;
-        font-size: 1.1rem;
         font-weight: 400;
     }
 
@@ -777,7 +818,6 @@ only screen and (                min-resolution: 2dppx) {
     }
     .info__discount del {
         color: #FFF;
-        font-size: 1.1rem;
         font-weight: 400;
     }
 
