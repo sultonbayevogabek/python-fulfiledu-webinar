@@ -472,11 +472,11 @@ only screen and (                min-resolution: 2dppx) {
     background-color: #F3F7F8;
     font-size: 1.125rem;
     padding: 0 1.125rem;
-    height: 3rem;
+    height: 3.5rem;
 }
 
 .form-button {
-    height: 3rem;
+    height: 4rem;
     border-radius: 0.75rem;
     background: #F5CB72;
     font-size: 1.325rem;
