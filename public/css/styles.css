@@ -297,22 +297,40 @@ only screen and (                min-resolution: 2dppx) {
     align-items: center;
 }
 .discount-smaller-width {
-    display: none;
+    display: none !important;
 }
 
-
-.info__discount {
-    display: flex;
-    flex-direction: column;
-}
-
-.info__discount del {
+.discount-smaller-width del {
     color: #FFF;
     font-size: 1.375rem;
     font-weight: 400;
 }
 
-.info__discount strong {
+.discount-smaller-width strong {
+    display: flex;
+    color: #F5CB72;
+    font-size: 3.125rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.mobile-button {
+    display: none;
+}
+
+
+.info__discount-larger {
+    display: flex;
+    flex-direction: column;
+}
+
+.info__discount-larger del {
+    color: #FFF;
+    font-size: 1.375rem;
+    font-weight: 400;
+}
+
+.info__discount-larger strong {
     display: flex;
     color: #F5CB72;
     font-size: 3.125rem;
@@ -540,13 +558,20 @@ only screen and (                min-resolution: 2dppx) {
         background-size: cover;
     }
 
+    .mobile-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
 
     .discount-smaller-width {
-        display: flex;
+        display: flex !important;
         flex-direction: row;
         align-items: center;
         justify-content: center;
         margin-top: 1rem;
+        margin-bottom: 1rem;
     }
 
     .discount-smaller-width del {
@@ -567,6 +592,10 @@ only screen and (                min-resolution: 2dppx) {
         margin-right: auto;
         width: 100% !important;
         max-width: 100% !important;
+    }
+
+    .info__opportunity .webinar-main-button {
+        display: none;
     }
 
     .info__discount {
