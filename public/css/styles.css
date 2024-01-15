@@ -756,9 +756,9 @@ only screen and (                min-resolution: 2dppx) {
 }
 
 @media (max-width: 600px) {
-    html {
-        font-size: 12px;
-    }
+    /*html {*/
+    /*    font-size: 12px;*/
+    /*}*/
     .gold, .webinar-title h1 {
         font-size: 2.5rem;
     }
