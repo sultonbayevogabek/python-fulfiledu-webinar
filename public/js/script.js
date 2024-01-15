@@ -3,14 +3,18 @@
 
 // Index page
 try {
-    const registerButton = document.querySelector('.webinar-main-button');
+    const registerButton = document.querySelectorAll('.webinar-main-button');
     const modalBackdrop = document.querySelector('.modal-backdrop');
     const modalCloserElements = document.querySelectorAll('[data-modal-close]');
     const form = document.querySelector('.form');
 
-    registerButton.addEventListener('click', () => {
-        modalBackdrop.classList.add('modal-backdrop--open')
-    })
+    if(registerButton) {
+        registerButton.forEach((item) => {
+            item.addEventListener('click', () => {
+                modalBackdrop.classList.add('modal-backdrop--open');
+            })
+        })
+    }
 
     function closeModal() {
         modalBackdrop.classList.remove('modal-backdrop--open');
