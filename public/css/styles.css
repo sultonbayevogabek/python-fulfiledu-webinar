@@ -428,8 +428,9 @@ only screen and (                min-resolution: 2dppx) {
 
 .modal-backdrop--open {
     display: grid;
-    animation: fade-slide-in 0.3s ease-out forwards;
 }
+
+
 
 .modal-content {
     position: relative;
@@ -440,15 +441,6 @@ only screen and (                min-resolution: 2dppx) {
     border-radius: 1.125rem;
     color: rgba(0, 0, 0, 0.60);
     background-attachment: fixed;
-}
-
-@keyframes fade-slide-in {
-    from {
-        transform: translateY(-5rem);
-    }
-    to {
-        transform: translateY(0);
-    }
 }
 
 
@@ -819,7 +811,7 @@ only screen and (                min-resolution: 2dppx) {
 
     .webinar-main-mentor img {
         width: 100%;
-        height: 400px;
+        height: auto;
     }
 }
 
