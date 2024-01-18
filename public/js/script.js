@@ -51,7 +51,7 @@ try {
         time: new Date().toLocaleString()
       }))
 
-      window.location.href = `https://t.me/+jXW5tvljpd02OWEy`
+      window.location.href = `${window.location.protocol}//${window.location.host}/telegram.html`
     }
   })
 } catch (e) {
