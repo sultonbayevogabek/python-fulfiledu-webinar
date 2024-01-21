@@ -364,7 +364,7 @@ only screen and (                min-resolution: 2dppx) {
     border-radius: 1.5rem;
     background: #3390ec;
     font-size: 1.5rem;
-    color: #443412;
+    color: #FFFFFF;
     font-weight: 500;
     transition: all 0.1s ease;
     cursor: pointer;
@@ -381,6 +381,8 @@ only screen and (                min-resolution: 2dppx) {
     animation-name: shake-it;
 }
 
+
+
 @keyframes shake-it {
     from, to {
         transform: translateX(0px);
@@ -396,8 +398,7 @@ only screen and (                min-resolution: 2dppx) {
 .webinar-telegram-button img {
     width: 2rem;
     margin-right: 0.75rem;
-    color:#F5CB72 ;
-    background-color: #F5CB72;
+  background-color: transparent !important;
 }
 
 .webinar-main-mentor {
@@ -824,7 +825,7 @@ only screen and (                min-resolution: 2dppx) {
 @media (max-width: 440px) {
     .webinar-main-mentor img {
         width: 100%;
-        height: 450px;
+        height: auto;
     }
 }
 
