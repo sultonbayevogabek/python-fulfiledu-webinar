@@ -398,7 +398,7 @@ only screen and (                min-resolution: 2dppx) {
 .webinar-telegram-button img {
     width: 2rem;
     margin-right: 0.75rem;
-  background-color: transparent !important;
+    background-color: transparent !important;
 }
 
 .webinar-main-mentor {
